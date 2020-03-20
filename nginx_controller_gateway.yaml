@@ -8,7 +8,7 @@
 
   tasks:
   - debug:
-      msg: '{{ lookup(nginxinc.nginx_controller.lookup1", 'param1')| nginxinc.nginx_controller.filter1 }}'
+      msg: '{{ lookup(nginxinc.nginx_controller.lookup1, nginx-controller-generate-token)| nginxinc.nginx_controller.filter1 }}'
 
   - include_role:
       name: nginx-controller-generate-token
