@@ -7,12 +7,9 @@
   - nginxinc.nginx_controller
 
   tasks:
-  - debug:
-      msg: '{{ lookup(nginxinc.nginx_controller.lookup1, nginx-controller-generate-token)| nginxinc.nginx_controller.filter1 }}'
-
   - include_role:
-      name: nginx-controller-generate-token
+      name: nginx_controller_generate_token
 
   - name: configure the gateway
     include_role:
-      name: nginx-controller-gateway
+      name: nginx_controller_gateway
