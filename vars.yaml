@@ -1,5 +1,4 @@
 ---
-controller_fqdn: "controller.example.local"
 environmentName: "production-us-west"
 gateway:
   metadata:

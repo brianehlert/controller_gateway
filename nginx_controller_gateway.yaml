@@ -6,8 +6,8 @@
 
   tasks:
   - include_role:
-      name: nginxinc.nginx_controller.ansible-role-nginx-controller-generate-token
+      name: nginxinc.nginx_controller.nginx-controller-generate-token
 
   - name: configure the gateway
     include_role:
-      name: ansible-role-nginx-controller-gateway
+      name: nginxinc.nginx_controller.nginx-controller-gateway
