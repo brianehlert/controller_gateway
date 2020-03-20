@@ -3,11 +3,16 @@
 
 - hosts: localhost
   gather_facts: no
+  collections: 
+  - nginxinc.nginx_controller
 
   tasks:
+  - debug:
+      msg: '{{ lookup(nginxinc.nginx_controller.lookup1", 'param1')| nginxinc.nginx_controller.filter1 }}'
+
   - include_role:
-      name: nginxinc.nginx_controller.nginx-controller-generate-token
+      name: nginx-controller-generate-token
 
   - name: configure the gateway
     include_role:
-      name: nginxinc.nginx_controller.nginx-controller-gateway
+      name: nginx-controller-gateway
