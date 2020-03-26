@@ -12,6 +12,10 @@
     - msg: "present working directory: {{ pwd }}"
     - msg: "playbook directory: {{ playbook_dir }}"
 
+  - name: do gateway vars pass
+    debug:
+    - msg: "{{ gateway }}"
+
   - include_role:
       name: nginx_controller_generate_token
 
