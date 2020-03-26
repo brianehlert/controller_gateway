@@ -7,6 +7,11 @@
   - nginxinc.nginx_controller
 
   tasks:
+  - name: where am i
+    debug:
+    - msg: "present working directory: {{ pwd }}"
+    - msg: "playbook directory: {{ playbook_dir }}"
+
   - include_role:
       name: nginx_controller_generate_token
 
