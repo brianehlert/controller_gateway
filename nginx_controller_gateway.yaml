@@ -15,10 +15,6 @@
   - name: load the vars.yaml 
     include_vars: "{{ playbook_dir }}/{{ tower_webhook_payload.repository.name }}/vars.yaml"
 
-  - name: do gateway vars pass
-    debug:
-    - msg: "{{ gateway }}"
-
   - include_role:
       name: nginx_controller_generate_token
 
