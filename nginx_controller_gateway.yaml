@@ -9,7 +9,7 @@
   tasks:
   - name: where am i
     debug:
-    - msg: "present working directory: {{ pwd }}"
+    - msg: "present working directory: {{ inventory_dir }}"
     - msg: "playbook directory: {{ playbook_dir }}"
 
   - name: clone the repo from the GitHub webhook
